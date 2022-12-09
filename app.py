@@ -13,11 +13,11 @@ eventlet.monkey_patch()
 app = Flask(__name__)
 app.config['MQTT_BROKER_URL'] = "api.allthingstalk.io"
 app.config['MQTT_BROKER_PORT'] = 1883
-app.config['MQTT_USERNAME'] = "maker:4JEb2z9qzWyDi0ByXzx58wY0Rwg6zmwOrTyDO72Q"
+app.config['MQTT_USERNAME'] = "maker:41gccdzr2xfld2hOClZuOvtiYzz6fJYcaWQOniFw"
 app.config['MQTT_PASSWORD'] = 'xxxxxx'
 app.config['MQTT_REFRESH_TIME'] = 1.0  # refresh time in seconds
 app.config['MQTT_KEEPALIVE'] = 5  # set the time interval for sending a ping to the broker to 5 seconds
-app.config['ATT_DEVICE_ID'] = "RNxYBdDAn2C9Pkj5FS72TaxO"
+app.config['ATT_DEVICE_ID'] = "iQVwKTiMb0icOtYTpi8Jsgkp"
 
 
 cors = CORS(app, resources={r"*": {"origins": "*"}})
@@ -28,7 +28,7 @@ socketio = SocketIO(app,cors_allowed_origins='*', async_mode="eventlet")
 
 @mqtt.on_connect()
 def handle_connect(client, userdata, flags, rc):
-    mqtt.subscribe('device/RNxYBdDAn2C9Pkj5FS72TaxO/asset/temperature/feed')
+    mqtt.subscribe('device/iQVwKTiMb0icOtYTpi8Jsgkp/asset/temperature/feed')
 
 @mqtt.on_message()
 def handle_mqtt_message(client, userdata, message):
