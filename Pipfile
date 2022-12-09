@@ -1,0 +1,26 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+flask-cors = "*"
+flask-socketio = "*"
+eventlet = "*"
+flask-mqtt = "*"
+flask-bootstrap = "*"
+psycopg2-binary = "*"
+paho-mqtt = "*"
+gunicorn = "*"
+pandas = "*"
+numpy = "*"
+
+[requires]
+python_version = "3.8"
+
+
+
+
